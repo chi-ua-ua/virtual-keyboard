@@ -1,3 +1,4 @@
+import { page } from "./keyboard.js";
 const textArea = document.querySelector('.textarea');
 const buttons = document.querySelectorAll('.button');
 

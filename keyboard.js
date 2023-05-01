@@ -1,8 +1,10 @@
+export const page = document.querySelector('body');
+page.innerHTML = `
 <div class="container">
 <div class="content-wrapper">
     <textarea autofocus class="textarea" name="" id="textarea" cols="90" rows="10"></textarea>
     <div class="keyboard">
-        <button id="`" class="button">`</button>
+        <button id="\`" class="button">\`</button>
         <button id="1" class="button">1</button>
         <button id="2" class="button">2</button>
         <button id="3" class="button">3</button>
@@ -29,7 +31,7 @@
         <button id="p" class="button">p</button>
         <button id="[" class="button">[</button>
         <button id="]" class="button">]</button>
-        <button id="backslash" class="button">\</button>
+        <button id="backslash" class="button">\\</button>
         <button id="del" class="button">Del</button>
         <button id="capslock" class="button capslock">Caps Lock</button>
         <button id="a" class="button">a</button>
@@ -69,3 +71,6 @@
     </div>
 </div >
 </div>
+
+`
+
