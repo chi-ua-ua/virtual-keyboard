@@ -1,4 +1,4 @@
-export const page = document.querySelector('body');
+const page = document.querySelector('body');
 page.innerHTML = `
 <div class="container">
 <div class="content-wrapper">
@@ -71,6 +71,5 @@ page.innerHTML = `
     </div>
 </div >
 </div>
-
 `
 
