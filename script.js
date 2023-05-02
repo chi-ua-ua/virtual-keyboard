@@ -145,7 +145,8 @@ const keyboard = {
 
 document.addEventListener('keydown', function (e) {
     console.log(e.code);
-    
+    textArea.focus();
+
   let  button = document.getElementById(`${keyboard[e.code]}`);
     if (e.target === 'ShiftLeft' || e.target === 'ShiftRight') {
         buttons.forEach(button => {
@@ -153,22 +154,35 @@ document.addEventListener('keydown', function (e) {
         })
     }
     if (e.code === 'CapsLock'){
+        button.classList.toggle('button_colored');
         buttons.forEach(button => {
             button.classList.toggle('upper-case');
         })
     }
-    button.classList.add('button_colored');
+    if (e.target !== 'CapsLock') {
+        button.classList.add('button_colored');
+    }
 });
 
 document.addEventListener('keyup', function (e) {
+
    let button = document.getElementById(`${keyboard[e.code]}`);
-    if (e.code !== 'CapsLock') {
-        button.classList.remove('button_colored');
-    } 
+   
+   if (e.target !== 'CapsLock') {
+       button.classList.remove('button_colored');
+   }
     if (e.target === 'ShiftLeft' || e.target === 'ShiftRight') {
         buttons.forEach(button => {
             button.classList.remove('upper-case');
         })
     }
-    
 });
+
+
+
+
+page.addEventListener('click', function (e) {
+    if (e.target.closest('.button')) {
+        textArea.innerHTML += e.target.innerHTML;
+    }
+})
