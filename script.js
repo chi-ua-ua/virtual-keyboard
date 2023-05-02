@@ -148,7 +148,7 @@ document.addEventListener('keydown', function (e) {
     textArea.focus();
 
   let  button = document.getElementById(`${keyboard[e.code]}`);
-    if (e.target === 'ShiftLeft' || e.target === 'ShiftRight') {
+    if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
         buttons.forEach(button => {
             button.classList.add('upper-case');
         })
@@ -159,7 +159,7 @@ document.addEventListener('keydown', function (e) {
             button.classList.toggle('upper-case');
         })
     }
-    if (e.target !== 'CapsLock') {
+    if (e.code !== 'CapsLock') {
         button.classList.add('button_colored');
     }
 });
@@ -168,10 +168,10 @@ document.addEventListener('keyup', function (e) {
 
    let button = document.getElementById(`${keyboard[e.code]}`);
    
-   if (e.target !== 'CapsLock') {
+   if (e.code !== 'CapsLock') {
        button.classList.remove('button_colored');
    }
-    if (e.target === 'ShiftLeft' || e.target === 'ShiftRight') {
+    if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
         buttons.forEach(button => {
             button.classList.remove('upper-case');
         })
