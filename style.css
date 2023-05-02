@@ -80,6 +80,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     transition: all 0.1s linear;
     color: white;
     background-color: rgb(70, 70, 70);
+    box-shadow: 3px 3px 0 0;
 }
 
 .backspace {
@@ -106,18 +107,21 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     width: 400px;
 }
 
-button:hover {
+.button:hover {
     background-color: rgb(157, 212, 157);
 }
 
-button:active {
+.button:active {
     background-color: green;
-    border-radius: 30px;
+    transform: translate(2px, 2px);
+    box-shadow: none;
 }
 
 .button_colored {
     background-color: green;
-    border-radius: 30px;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+    transition: all 0.1s linear;
 }
 
 .upper-case {
